@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+	"name": "Module Extension Test",
+	"short_name": "MyMATE",
+	"description": "Test Module Extension",
+	"version": "0.1.0",
+	"permissions": [
+		"storage",
+		"tabs",
+		"activeTab",
+		"downloads",
+		"https://*.utas.edu.au/",
+		"https://echo360.org.au/*"
+	],
+	"web_accessible_resources": [
+		"components/*",
+		"chrome-extension://*",
+		"*.utas.edu.au"
+	],
+	"externally_connectable": {
+		"matches": ["*://mylo-manager.utas.edu.au/*","*://mylo.utas.edu.au/*","*://echo360.org.au/*","*://d2ldev2.utas.edu.au/*"]
+	},
+	"background": {
+		"page": "background.html"
+	}
+}
